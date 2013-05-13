@@ -235,5 +235,12 @@ TolitoConstructor.prototype = {
             this._isRunning = false;
         }
         return this;
+    },
+    setValue: function (val) {
+        $(['#', this.getId()].join(""))
+            .progressbar({
+            value: val
+        });
+        return this;
     }
 };
